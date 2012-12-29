@@ -1,0 +1,23 @@
+{
+  "name": "Google TTS for Duolingo",
+  "version": "0.1",
+  "manifest_version": 2,
+  "description": "Use Google's Text-to-Speech engine instead of Duolingo's.",
+  "background": {
+    "scripts": ["background.js"]
+  },
+"browser_action": {
+    "default_icon": {
+      "19": "images/duo19green.png",
+      "38": "images/duo38green.png"
+    },
+    "default_title": "Google TTS For Duolingo"
+  },
+"permissions": [
+      "storage",
+      "webRequest",
+      "webRequestBlocking",
+      "*://*.duolingo.com/*",
+      "*://translate.google.com/*"
+  ]
+}
