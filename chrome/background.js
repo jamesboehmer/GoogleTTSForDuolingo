@@ -15,7 +15,6 @@ var storage = chrome.storage.local;
 var googleTTSForDuolingoEnabled=true;
 
 storage.get('googleTTSForDuolingoEnabled', function(result){
-	console.log(result);
 	if(typeof(result.googleTTSForDuolingoEnabled) != 'undefined'){
 		googleTTSForDuolingoEnabled=result.googleTTSForDuolingoEnabled;
 	}
@@ -24,7 +23,7 @@ storage.get('googleTTSForDuolingoEnabled', function(result){
 
 chrome.webRequest.onBeforeRequest.addListener(
   function(details) { 
-  	if(!googleTTSForDuolingoEnabled) {
+  	if(!googleTTSForDuolingoEnabled || details.url.indexOf('speed=') != -1) {
   		console.log('Allowing Duolingo TTS:',details.url);
   		return {};
   	}
