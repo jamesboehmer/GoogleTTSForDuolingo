@@ -6,14 +6,14 @@
   "background": {
     "scripts": ["background.js"]
   },
-  "icons": { "16": "images/duo16green.png",
-           "48": "images/duo48green.png",
-          "128": "images/duo128green.png" 
+  "icons": { "16": "images/duo-wings-up-16.png",
+           "48": "images/duo-wings-up-48.png",
+          "128": "images/duo-wings-up-128.png" 
   },
 "browser_action": {
     "default_icon": {
-      "19": "images/duo19green.png",
-      "38": "images/duo38green.png"
+      "19": "images/duo-wings-up-19.png",
+      "38": "images/duo-wings-up-38.png"
     },
     "default_title": "GTTS For Duolingo"
   },

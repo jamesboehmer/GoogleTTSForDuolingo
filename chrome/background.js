@@ -65,10 +65,10 @@ chrome.webRequest.onBeforeSendHeaders.addListener(
 function setIcon(){
 	console.log('googleTTSForDuolingoEnabled:', googleTTSForDuolingoEnabled);
 	if(googleTTSForDuolingoEnabled){
-		chrome.browserAction.setIcon({path:"images/duo19green.png"});
+		chrome.browserAction.setIcon({path:{ 19 : "images/duo-wings-up-19.png", 38 : "images/duo-wings-up-38.png"}});
 	}
 	else{
-		chrome.browserAction.setIcon({path:"images/duo19purple.png"});
+		chrome.browserAction.setIcon({path:{ 19 : "images/duo-wings-down-19.png", 38 : "images/duo-wings-down-38.png"}});
 	}
 }
 
